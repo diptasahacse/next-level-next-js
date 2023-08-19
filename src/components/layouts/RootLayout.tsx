@@ -1,10 +1,9 @@
 import React, { ReactNode } from "react";
-import Link from 'next/link'
+import Link from "next/link";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
 import { ChildrenProps } from "../../interface/ChildrenProp";
 
 const { Header, Content, Footer } = Layout;
-
 
 const RootLayout = ({ children }: ChildrenProps) => {
   const {
@@ -19,7 +18,7 @@ const RootLayout = ({ children }: ChildrenProps) => {
       <Header style={{ display: "flex", alignItems: "center" }}>
         <div className="demo-logo" />
         <Menu mode="horizontal" theme="dark">
-          {menuItems.map(item => (
+          {menuItems.map((item) => (
             <Menu.Item key={item.link}>
               <Link href={item.link}>{item.label}</Link>
             </Menu.Item>
@@ -29,13 +28,17 @@ const RootLayout = ({ children }: ChildrenProps) => {
       <Content style={{ padding: "20px 50px" }}>
         <div
           className="site-layout-content"
-          style={{ background: colorBgContainer, minHeight:"100vh", padding: "20px"  }}
+          style={{
+            background: colorBgContainer,
+            minHeight: "100vh",
+            padding: "20px",
+          }}
         >
           {children}
         </div>
       </Content>
-      <Footer style={{ textAlign: "center" }}>
-        Ant Design ©2023 Created by Ant UED
+      <Footer style={{ textAlign: "center", backgroundColor:"#e3e3e3" }}>
+        Dipta Saha ©{new Date().getFullYear()}
       </Footer>
     </Layout>
   );

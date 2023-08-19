@@ -1,16 +1,14 @@
 import React from "react";
-import DashboardLayout from "../../components/layouts/DashboardLayout";
-import RootLayout from "../../components/layouts/RootLayout";
+import DashboardLayout from "@/components/layouts/DashboardLayout";
 
 const Dashboard = () => {
-  return <div>Dashboard Page</div>;
+  return <div>
+    Dashboard
+  </div>;
 };
 
 export default Dashboard;
 
 Dashboard.getLayout = function getLayout(page: React.ReactNode) {
-  <DashboardLayout>{page}</DashboardLayout>;
+  return <DashboardLayout>{page}</DashboardLayout>;
 };
-// Dashboard.getLayout = function getLayout(page: React.ReactNode) {
-//   return <RootLayout>{page}</RootLayout>;
-// };
